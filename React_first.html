@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>My own website</h1>
+
+    <div id="banner"></div>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+    <script type="text/babel">
+
+    /* 
+
+    React is front end Javascript framework which is called Javascript
+
+    library created by facebook.
+
+    this library creates a virtual DOM in memory , where it does all the  necessary
+    manipulating before making the changes in the DOM browser.
+
+    React finds out what changes is needed , and it changes only that needs to be changed.
+
+    what is JSX?
+
+    Any code which appears like HTML and is written inside Javascript is JSX code.  
+
+    JSX allows us to write HTML elements in Javascript and place them in a DOM.
+
+    It converts HTML tags into react elements.
+
+    with JSX we can write expressions inside {} curly braces
+
+    the expressions can be property or any valid  Javascript expressions, JSX
+
+    will execute and return the result.
+
+    what is virtual DOM?
+
+    Virtual Dom in React is the virtual representation of RealDOM
+    
+    React JS uses virtualDom as a strategy to compute minimal DOM  operations
+    when rendering the UI.
+
+    React update the state changes in Virtual DOM first and then it sync with
+    Real DOM.
+
+    we can , think virtual DOM is just like a blueprint of a machine and it can
+    do changes in the blueprint but those changes will not  directly apply to 
+    the machine.
+
+    React maintains 2 virtual DOMs, one with the updated state Virtual DOM and
+    other with previous state Virtual DOM.
+
+    VirtualDOM in React uses to optimize the performance of  application.
+
+    In React we are using JSX which should not be implemented directly by
+    browsers , but instead requires a compiler to transform it into ECMAScript,
+    this is where Babel comes in and act as compiler.
+
+    Babel is a transpiler which allows us to use future Javascript in todays
+    browser which can convert latest version of javascript code into the one
+    that browser understands.
+
+
+    */
+
+    // const Banner =() =>{
+    //     return <p>My Page</p>;
+    // };
+
+    const Banner =()=>{
+        const title ="Welcome to my website!";
+        const subtitle ="This is a website for learning react";
+        const address = "www.mysite.com";
+    
+    return (
+        <div>
+            <h2> Displaying all the content details...</h2>
+            <h3>{title.toUpperCase()}</h3>
+            <p>{subtitle}</p>
+            <a href={address}>Visit page</a>
+            <p> Today's date is : {new Date().toDateString()}</p>
+            </div>
+    );
+        
+        } ;
+
+    ReactDOM.render(<Banner></Banner>,document.getElementById("banner"));
+
+    // ReactDOM.render(<p>My Page</p>, document.getElementById("banner"));
+
+</script>
+
+</body>
+</html>
+
+

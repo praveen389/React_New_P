@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>React Second Example</h1>
+    <div id="banner"></div>
+
+    <footer>
+        Footer
+    </footer>
+    <script type="text/babel">
+        ReactDOM.render(
+            <div>
+                <h1>Favorite Movie </h1>
+                <ul>
+                    <li> Ineption </li>
+                    <li> Interstellar </li>
+                    <li> Mission Impossible </li>
+                    <li> Avatar </li>
+                    </ul>
+                    </div>,
+                    document.querySelector("#banner")
+        );
+    </script>
+</body>
+</html>
